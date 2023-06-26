@@ -15,7 +15,8 @@ stack:
 <li>React-loader-spinner,</li>
 <li>Axios,</li>
 <li>Styled-Components,</li> 
-<li>mockAPI,</li>
 <li>Github pages,</li>
 <li>Git.</li>
 </ul>
+
+<a href="https://connections-api.herokuapp.com/docs/">API-docs</a>
