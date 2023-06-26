@@ -14,7 +14,6 @@ stack:
 <li>React-router-dom,</li> 
 <li>React-loader-spinner,</li>
 <li>Axios,</li>
-<li>Styled-Components,</li> 
 <li>Github pages,</li>
 <li>Git.</li>
 </ul>
