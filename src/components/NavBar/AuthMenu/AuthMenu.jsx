@@ -1,11 +1,13 @@
-import React from 'react'
+import css from "./AuthMenu.module.scss";
+import { NavLink } from "react-router-dom";
 
-const AuthMenu = () => {
+const UserMenu = () => {
   return (
-    <div>
-      AuthMenu
+    <div className={css.div}>
+      <NavLink to={"/register"}>Register</NavLink>
+      <NavLink to={"/login"}>Login</NavLink>
     </div>
-  )
-}
+  );
+};
 
-export default AuthMenu
+export default UserMenu;

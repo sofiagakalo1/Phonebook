@@ -1,21 +1,27 @@
-import React from "react";
+import { useSelector } from "react-redux";
+import { isUserLogin } from "../../redux/selectors";
+import UserMenu from "./UserMenu/UserMenu";
+import AuthMenu from "./AuthMenu/AuthMenu";
 import { NavLink } from "react-router-dom";
-// import AuthMenu from './AuthMenu/AuthMenu';
-// import UserMenu from './UserMenu/UserMenu';
-
 import css from "./NavBar.module.scss";
 
 const NavBar = () => {
+  const isLogin = useSelector(isUserLogin);
+
   return (
     <header className={css.header}>
       <div className={css.nav_links}>
         <NavLink to="/" className={css.link}>
           Home
         </NavLink>
-        <NavLink to="/contacts" className={css.link}>
-          Contacts
-        </NavLink>
+        {isLogin && (
+          <NavLink to="/contacts" className={css.link}>
+            Contacts
+          </NavLink>
+        )}
       </div>
+      {!isLogin && <AuthMenu />}
+      {isLogin && <UserMenu />}
     </header>
   );
 };

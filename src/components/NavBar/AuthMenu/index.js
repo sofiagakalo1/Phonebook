@@ -1,2 +1,1 @@
-import AuthMenu from "./AuthMenu";
-export default AuthMenu;
+export { default } from './AuthMenu';
