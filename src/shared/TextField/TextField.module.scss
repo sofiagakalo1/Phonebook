@@ -1,0 +1,79 @@
+.formInput {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: baseline;
+}
+
+.iconLabel {
+  position: relative;
+}
+
+.inputIconRight svg use,
+.inputIconLeft svg use {
+  fill: var(--icon-color, #f9c5bd);
+  transition: all 250ms ease;
+}
+
+.iconLabel:hover .inputIconRight svg use,
+.iconLabel:hover .inputIconLeft svg use,
+.iconLabel:focus-within .inputIconRight svg use,
+.iconLabel:focus-within .inputIconLeft svg use {
+  fill: #7e6c81;
+}
+
+.iconLabel:hover .inputIconRight,
+.iconLabel:hover .inputIconLeft,
+.iconLabel:focus-within .inputIconRight,
+.iconLabel:focus-within .inputIconLeft {
+  color: #7e6c81;
+  transition: all 250ms ease;
+}
+
+.iconLabel:hover .inputField,
+.iconLabel:focus-within .inputField {
+  border: 1px solid #7e6c81;
+  transition: all 250ms ease;
+}
+
+.inputField {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #f9c5bd;
+  border-radius: 10px;
+  outline-width: 0;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.label {
+  width: 60px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #3e4d69;
+}
+
+.inputIconFieldRight {
+  padding-right: 50px;
+}
+.inputIconRight {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #f9c5bd;
+}
+.inputIconFieldLeft {
+  padding-left: 50px;
+}
+.inputIconLeft {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #f9c5bd;
+}
