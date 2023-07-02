@@ -127,8 +127,7 @@
 <path d="M25.143 27.429v-2.286c0-2.525-2.047-4.571-4.571-4.571v0h-9.143c-2.525 0-4.571 2.047-4.571 4.571v0 2.286M20.571 11.429c0 2.525-2.047 4.571-4.571 4.571s-4.571-2.047-4.571-4.571v0c0-2.525 2.047-4.571 4.571-4.571s4.571 2.047 4.571 4.571v0z"></path>
 <path d="M16 0.857c8.363 0 15.143 6.78 15.143 15.143s-6.78 15.143-15.143 15.143c-8.363 0-15.143-6.78-15.143-15.143s6.78-15.143 15.143-15.143z"></path>
 </symbol>
-
-<symbol id="add-photo-pet" viewBox="0 0 33 32">
+<symbol id="add-photo" viewBox="0 0 33 32">
 <path fill="none" stroke="#54adff" style="stroke: var(--color1, #54adff)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.28" d="M16.64 31.36v-15.36M16.64 16v-15.36M16.64 16h15.6M16.64 16h-15.6"></path>
 </symbol>
 <symbol id="sun" viewBox="0 0 512 512">
