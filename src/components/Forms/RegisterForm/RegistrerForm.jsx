@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 import TextField from "../../../shared/TextField/TextFiled";
-
 import Icon from "../../../shared/Icon/Icon";
+import Button from "../../../shared/Button";
 
 import fields from "./fields";
 import initialState from "./initialState";
@@ -77,7 +77,14 @@ const RegisterForm = ({ onSubmit }) => {
             </button>
           </div>
         </div>
-        <button type="submit">Register</button>
+        <Button
+          type="submit"
+          text="Register"
+          buttonStyle={{
+            padding: "5px 20px",
+            fontSize: "16px",
+          }}
+        />
       </form>
     </div>
   );

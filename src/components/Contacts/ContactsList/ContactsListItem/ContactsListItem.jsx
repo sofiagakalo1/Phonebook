@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { fetchDeleteContact } from "../../../../redux/contacts/contacts-operations";
 
 import Icon from "../../../../shared/Icon/Icon";
+import Button from "../../../../shared/Button";
 
 import css from "./contactsListItem.module.scss";
 
@@ -20,9 +21,14 @@ const ContactsListItem = ({ id, name, number }) => {
       <p className={css.p}>
         {name}: {number}
       </p>
-      <button onClick={() => handleDeleteContact(id)} type="button">
+      <Button
+        onClick={() => handleDeleteContact(id)}
+        type="button"
+        onlyIcon={true}
+        buttonStyle={{ marginLeft: "auto" }}
+      >
         <Icon id="trash" h="21" w="21" />
-      </button>
+      </Button>
     </li>
   );
 };

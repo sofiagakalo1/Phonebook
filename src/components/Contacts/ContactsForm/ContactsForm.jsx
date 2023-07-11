@@ -7,6 +7,8 @@ import { getAllContacts } from "../../../redux/selectors";
 
 import TextField from "../../../shared/TextField";
 import Icon from "../../../shared/Icon/Icon";
+import Button from "../../../shared/Button";
+
 import fields from "./fields";
 
 import css from "./ContactsForm.module.scss";
@@ -62,10 +64,18 @@ const ContactsForm = () => {
           {...fields.number}
         />
         <div>
-          <button type="submit">
-            Add contact
+          <Button
+            text="Add contact"
+            type="submit"
+            hasIcon={true}
+            buttonStyle={{
+              padding: "5px 8px",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
             <Icon id="plus" h="24" w="24" />
-          </button>
+          </Button>
         </div>
       </div>
     </form>

@@ -1,11 +1,20 @@
+import React from "react";
+
+import Button from "../../../shared/Button/Button.jsx";
+import Icon from "../../../shared/Icon/Icon";
+
 import css from "./AuthMenu.module.scss";
-import { NavLink } from "react-router-dom";
 
 const UserMenu = () => {
   return (
     <div className={css.div}>
-      <NavLink to={"/register"}>Register</NavLink>
-      <NavLink to={"/login"}>Login</NavLink>
+      <Button navLink={true} text="Register" to={"/register"} hasIcon={true}>
+        <Icon id="register" h="28" w="28" />
+      </Button>
+
+      <Button navLink={true} text="Login" to={"/login"} hasIcon={true}>
+        <Icon id="login" h="28" w="28" />
+      </Button>
     </div>
   );
 };

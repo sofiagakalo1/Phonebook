@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import useForm from "../../../hooks/useForm.js";
 
 import TextField from "../../../shared/TextField/TextFiled";
-
 import Icon from "../../../shared/Icon/Icon";
+import Button from "../../../shared/Button/Button.jsx";
 
 import fields from "./fields";
 import initialState from "./initialState";
@@ -60,7 +60,14 @@ const LoginForm = ({ onSubmit }) => {
             </button>
           </div>
         </div>
-        <button type="submit">Login</button>
+        <Button
+          type="submit"
+          text="Login"
+          buttonStyle={{
+            padding: "5px 20px",
+            fontSize: "16px",
+          }}
+        />
       </form>
     </div>
   );
