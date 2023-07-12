@@ -14,6 +14,7 @@ import css from "./EditContactForm.module.scss";
 const EditContactForm = ({ id, onClose }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [isFormChanged, setIsFormChanged] = useState(false);
   const dispatch = useDispatch();
   const contactToEdit = useSelector((state) => selectContactById(state, id));
 
@@ -24,15 +25,19 @@ const EditContactForm = ({ id, onClose }) => {
 
   const handleNameChange = (event) => {
     setName(event.target.value);
+    setIsFormChanged(true);
   };
 
   const handlePhoneChange = (event) => {
     setNumber(event.target.value);
+    setIsFormChanged(true);
   };
+
   const data = { name, number };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     dispatch(fetchEditContact({ id, data }));
     toast.success(`${name} edited successfully!`);
     onClose();
@@ -56,7 +61,14 @@ const EditContactForm = ({ id, onClose }) => {
           onChange={handlePhoneChange}
         />
         <div className={css.buttons}>
-          <Button text="Save" hasIcon={true} />
+          <Button
+            text="Save"
+            hasIcon={true}
+            disabled={!isFormChanged}
+            buttonStyle={
+              !isFormChanged ? { opacity: 0.4, cursor: "not-allowed" } : {}
+            }
+          />
           <Button text="Cancel" hasIcon={true} onClick={onClose} />
         </div>
       </form>
