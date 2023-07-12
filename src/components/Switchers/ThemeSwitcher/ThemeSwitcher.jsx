@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
   return (
     <button onClick={toggleTheme} className={css.button}>
       <div className={css.switch}>
-        <label className= {theme === "dark" ? css.moon : css.sun} for="Switch">
+        <label className= {theme === "dark" ? css.moon : css.sun}>
           <span className={css.switch__indicator}></span>
           <span className={css.switch__decoration}></span>
         </label>
