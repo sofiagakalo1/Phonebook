@@ -1,14 +1,14 @@
-import React from 'react'
-import { useDispatch} from 'react-redux';
+import React from "react";
+import { useDispatch } from "react-redux";
 
-import { fetchLogin } from '../redux/auth/auth-operations';
+import { fetchLogin } from "../redux/auth/auth-operations";
 
-import LoginForm from '../components/Forms/LoginForm/LoginForm';
+import LoginForm from "../components/Forms/LoginForm/LoginForm";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
 
-  const handleLogin = userData => {
+  const handleLogin = (userData) => {
     dispatch(fetchLogin(userData));
   };
 

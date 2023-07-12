@@ -1,18 +1,11 @@
-// import {
-//   getAllContacts,
-//   addContact,
-//   deleteContact,
-//   editContact,
-// } from '../../services/API/contacts-api';
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { instance } from '../../redux/auth/auth-operations'; ///замінити лише на апі
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { instance } from "../../redux/auth/auth-operations"; ///замінити лише на апі
 
 export const fetchAllContacts = createAsyncThunk(
-  'contacts/fetchAll',
+  "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await instance.get('/contacts');
-      // console.log(result);
+      const response = await instance.get("/contacts");
       return response.data;
     } catch ({ response }) {
       return thunkAPI.rejectWithValue(response.data.message);
@@ -21,11 +14,10 @@ export const fetchAllContacts = createAsyncThunk(
 );
 
 export const fetchAddContact = createAsyncThunk(
-  'contacts/fetchAdd',
+  "contacts/fetchAdd",
   async (data, thunkAPI) => {
     try {
-      const response = await instance.post('/contacts', data);
-      // console.log(data);
+      const response = await instance.post("/contacts", data);
       return response.data;
     } catch ({ response }) {
       return thunkAPI.rejectWithValue(response.data.message);
@@ -52,11 +44,10 @@ export const fetchAddContact = createAsyncThunk(
 );
 
 export const fetchDeleteContact = createAsyncThunk(
-  'contacts/fetchDelete',
+  "contacts/fetchDelete",
   async (id, thunkAPI) => {
     try {
       const response = await instance.delete(`/contacts/${id}`);
-      // console.log(response)
       return response.data.id;
     } catch ({ response }) {
       return thunkAPI.rejectWithValue(response.data.message);
@@ -65,11 +56,10 @@ export const fetchDeleteContact = createAsyncThunk(
 );
 
 export const fetchEditContact = createAsyncThunk(
-  'contacts/fetchEdit',
+  "contacts/fetchEdit",
   async ({ id, data }, thunkAPI) => {
     try {
       const response = await instance.patch(`/contacts/${id}`, data);
-      // console.log(response);
       return response.data;
     } catch ({ response }) {
       return thunkAPI.rejectWithValue(response.data.message);
