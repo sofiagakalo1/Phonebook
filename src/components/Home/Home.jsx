@@ -6,7 +6,7 @@ const Home = () => {
       <div className={css.container}>
         <h1 className={css.title}>Welcome to phonebook!</h1>
         <div className={css.gif}>
-          <img src={require("../../assets/home_gif.gif")} alt="Example GIF" />
+          <img src={require("../../assets/gifs/home_gif.gif")} alt="GIF" />
         </div>
       </div>
     </>

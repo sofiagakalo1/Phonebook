@@ -1,8 +1,13 @@
+import React from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+
 import { isUserLogin } from "../../redux/selectors";
+
 import UserMenu from "./UserMenu/UserMenu";
 import AuthMenu from "./AuthMenu/AuthMenu";
-import { NavLink } from "react-router-dom";
+import ThemeSwitcher from "../Switchers/ThemeSwitcher/ThemeSwitcher";
+
 import css from "./NavBar.module.scss";
 
 const NavBar = () => {
@@ -20,6 +25,7 @@ const NavBar = () => {
           </NavLink>
         )}
       </div>
+      <ThemeSwitcher />
       {!isLogin && <AuthMenu />}
       {isLogin && <UserMenu />}
     </header>

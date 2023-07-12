@@ -1,0 +1,16 @@
+.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.lightTheme {
+  background-image: url(./assets/images/background/light_bg.png);
+  background-color: #a488a8;
+}
+
+.darkTheme {
+  background-image: url(./assets/images/background/dark_bg.png);
+  background-color: #333;
+}
