@@ -1,0 +1,16 @@
+.container {
+  padding: 2px 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.lightTheme {
+  background-color: rgb(252, 226, 222);
+  color: rgb(106, 72, 110);
+}
+.darkTheme {
+  background-color: rgb(195, 128, 236);
+  color: rgb(22, 63, 209);
+}

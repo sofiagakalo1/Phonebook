@@ -8,7 +8,7 @@ import css from "./Contacts.module.scss";
 
 const Contacts = () => {
   return (
-    <div className={css.block}>
+    <section className={css.block}>
       <div className={`${css.wrapper_phonebook} ${css.wrapper}`}>
         <h2 className={css.h}>Phonebook</h2>
         <ContactsForm />
@@ -18,7 +18,7 @@ const Contacts = () => {
         <ContactsFilter />
         <ContactsList />
       </div>
-    </div>
+    </section>
   );
 };
 

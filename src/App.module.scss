@@ -1,16 +1,23 @@
-.container {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+body {
+
 }
 
 .lightTheme {
-  background-image: url(./assets/images/background/light_bg.png);
-  background-color: #a488a8;
+  height: 100vmax;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(180deg, #F8E3DF 0%, #A089A6 82.29%);
+  // background-image: url(./assets/images/background/light_bg.png);
 }
 
-.darkTheme {
-  background-image: url(./assets/images/background/dark_bg.png);
-  background-color: #333;
-}
+  .darkTheme {
+    height: 100vmax;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(180deg, rgba(134, 0, 217, 0.50) 0%, rgba(4, 59, 255, 0.50) 57.81%);
+    // background-image: url(./assets/images/background/dark_bg.png);
+  }

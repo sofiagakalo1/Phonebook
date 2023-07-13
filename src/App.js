@@ -8,7 +8,7 @@ import { selectIsRefreshing } from "../src/redux/selectors";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 
-import Layout from "./components/Layout/Layout";
+import Layout from "./layout/Layout";
 import Loader from "./components/Loader/Loader";
 
 import { ThemeContext } from "./utils/ThemeProvider/ThemeProvider";
@@ -32,11 +32,7 @@ export function App() {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <div
-      className={`${css.container} ${
-        theme === "dark" ? css.darkTheme : css.lightTheme
-      }`}
-    >
+    <div className={`${theme === "dark" ? css.darkTheme : css.lightTheme}`}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

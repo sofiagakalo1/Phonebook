@@ -2,14 +2,12 @@ import css from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <>
-      <div className={css.container}>
-        <h1 className={css.title}>Welcome to phonebook!</h1>
-        <div className={css.gif}>
-          <img src={require("../../assets/gifs/home_gif.gif")} alt="GIF" />
-        </div>
+    <section className={css.container}>
+      <h1 className={css.title}>Welcome to phonebook!</h1>
+      <div className={css.gif}>
+        <img src={require("../../assets/gifs/home_gif.gif")} alt="GIF" />
       </div>
-    </>
+    </section>
   );
 };
 

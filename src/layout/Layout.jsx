@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import NavBar from "../components/NavBar/NavBar";
 import Loader from "../components/Loader/Loader";
+import Footer from "../components/Footer/Footer";
 
 import css from "./Layout.module.scss";
 
@@ -24,6 +25,7 @@ const Layout = () => {
           hideProgressBar="true"
         />
       </div>
+      <Footer />
     </>
   );
 };
