@@ -28,14 +28,12 @@ export function App() {
   useEffect(() => {
     dispatch(fetchCurrent());
   }, [dispatch]);
-  
+
   return isRefreshing ? (
     <Loader />
   ) : (
     <div className={`${theme === "dark" ? css.darkTheme : css.lightTheme}`}>
-      <div
-        className={`${theme === "dark" ? css.darkBg : css.lightBg}`}
-      >
+      <div className={`${theme === "dark" ? css.darkBg : css.lightBg}`}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
