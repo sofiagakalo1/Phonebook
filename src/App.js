@@ -28,24 +28,28 @@ export function App() {
   useEffect(() => {
     dispatch(fetchCurrent());
   }, [dispatch]);
-
+  
   return isRefreshing ? (
     <Loader />
   ) : (
     <div className={`${theme === "dark" ? css.darkTheme : css.lightTheme}`}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="*" element={<Navigate to="/" replace="*" />} />
-          <Route element={<PublicRoute />}>
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/login" element={<LoginPage />} />
+      <div
+        className={`${theme === "dark" ? css.darkBg : css.lightBg}`}
+      >
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="*" element={<Navigate to="/" replace="*" />} />
+            <Route element={<PublicRoute />}>
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Route>
+            <Route element={<PrivateRoute />}>
+              <Route path="/contacts" element={<ContactsPage />} />
+            </Route>
           </Route>
-          <Route element={<PrivateRoute />}>
-            <Route path="/contacts" element={<ContactsPage />} />
-          </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </div>
     </div>
   );
 }

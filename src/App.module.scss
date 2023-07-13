@@ -1,23 +1,28 @@
-body {
-
-}
-
 .lightTheme {
-  height: 100vmax;
-  width: 100%;
-  background-repeat: no-repeat;
+  height: 100vh;
   background-size: cover;
-  background-position: center;
-  background: linear-gradient(180deg, #F8E3DF 0%, #A089A6 82.29%);
-  // background-image: url(./assets/images/background/light_bg.png);
+  background: linear-gradient(180deg, #f8e3df 0%, #a089a6 82.29%);
 }
 
-  .darkTheme {
-    height: 100vmax;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background: linear-gradient(180deg, rgba(134, 0, 217, 0.50) 0%, rgba(4, 59, 255, 0.50) 57.81%);
-    // background-image: url(./assets/images/background/dark_bg.png);
-  }
+.darkTheme {
+  height: 100vh;
+  background-size: cover;
+  background: linear-gradient(
+    180deg,
+    rgba(134, 0, 217, 0.5) 0%,
+    rgba(4, 59, 255, 0.5) 57.81%
+  );
+}
+.lightBg {
+  height: 832px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./assets/images/background/light_bg.png);
+}
+
+.darkBg {
+  height: 832px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./assets/images/background/dark_bg.png);
+}
