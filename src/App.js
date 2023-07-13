@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, lazy } from "react";
+import React, { useEffect, lazy } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -11,10 +11,6 @@ import PublicRoute from "./routes/PublicRoute";
 import Layout from "./layout/Layout";
 import Loader from "./components/Loader/Loader";
 
-import { ThemeContext } from "./utils/ThemeProvider/ThemeProvider";
-
-import css from "./App.module.scss";
-
 const HomePage = lazy(() => import("../src/pages/HomePage"));
 const RegisterPage = lazy(() => import("../src/pages/RegisterPage"));
 const LoginPage = lazy(() => import("../src/pages/LoginPage"));
@@ -23,7 +19,6 @@ const ContactsPage = lazy(() => import("../src/pages/ContactsPage"));
 export function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     dispatch(fetchCurrent());
@@ -32,22 +27,18 @@ export function App() {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <div className={`${theme === "dark" ? css.darkTheme : css.lightTheme}`}>
-      <div className={`${theme === "dark" ? css.darkBg : css.lightBg}`}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="*" element={<Navigate to="/" replace="*" />} />
-            <Route element={<PublicRoute />}>
-              <Route path="/register" element={<RegisterPage />} />
-              <Route path="/login" element={<LoginPage />} />
-            </Route>
-            <Route element={<PrivateRoute />}>
-              <Route path="/contacts" element={<ContactsPage />} />
-            </Route>
-          </Route>
-        </Routes>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<Navigate to="/" replace="*" />} />
+        <Route element={<PublicRoute />}>
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/contacts" element={<ContactsPage />} />
+        </Route>
+      </Route>
+    </Routes>
   );
 }
