@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { selectUserEmail } from "../../../redux/selectors";
@@ -7,11 +7,14 @@ import { fetchLogout } from "../../../redux/auth/auth-operations";
 import Button from "../../../shared/Button";
 import Icon from "../../../shared/Icon/Icon";
 
+import { ThemeContext } from "../../../utils/ThemeProvider/ThemeProvider";
+
 import css from "./UserMenu.module.scss";
 
 const UserMenu = () => {
   const userEmail = useSelector(selectUserEmail);
   const dispatch = useDispatch();
+  const { theme } = useContext(ThemeContext);
 
   const onLogout = () => {
     dispatch(fetchLogout());
@@ -23,7 +26,11 @@ const UserMenu = () => {
         <Button navLink={true} to={"/user"} onlyIcon={true}>
           <Icon id="user" h="28" w="28" />
         </Button>
-        <p className={css.p}>{userEmail}</p>
+        <p
+          className={`${theme === "dark" ? css.p_darkTheme : css.p_lightTheme}`}
+        >
+          {userEmail}
+        </p>
       </div>
       <Button
         onClick={onLogout}

@@ -4,11 +4,16 @@
   align-items: center;
   justify-content: center;
 }
-.title {
+.h1 {
   font-weight: 700;
   font-size: 48px;
   text-align: center;
+}
+.h1_lightTheme {
   color: #7e77a0;
+}
+.h1_darkTheme {
+  color: #eec0f0;
 }
 .gif {
   width: 50%;

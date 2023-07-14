@@ -3,16 +3,19 @@
   padding: 15px 30px;
   align-items: center;
 }
-
 .nav_links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  color: #28284a;
   font-size: 24px;
 }
-
+.nav_links_lightTheme {
+  color: #28284a;
+}
+.nav_links_darkTheme {
+  color: #eec0f0;
+}
 .link {
   &:global(.active) {
     font-weight: bold;
