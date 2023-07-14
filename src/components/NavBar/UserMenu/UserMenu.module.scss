@@ -4,6 +4,13 @@
   gap: 30px;
   flex-direction: row;
   font-size: 20px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+  }
 }
 
 .userContainer {
@@ -15,6 +22,7 @@
 .p_lightTheme {
   color: #7e77a0;
 }
+
 .p_darkTheme {
   color: #eec0f0;
 }

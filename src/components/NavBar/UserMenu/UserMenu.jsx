@@ -23,9 +23,9 @@ const UserMenu = () => {
   return (
     <div className={css.div}>
       <div className={css.userContainer}>
-        <Button navLink={true} to={"/user"} onlyIcon={true}>
-          <Icon id="user" h="28" w="28" />
-        </Button>
+        {/* <Button navLink={true} to={"/user"} onlyIcon={true}>
+          <Icon id="user" h="28" w="28"/>
+        </Button> */}
         <p
           className={`${theme === "dark" ? css.p_darkTheme : css.p_lightTheme}`}
         >

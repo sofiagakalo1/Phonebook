@@ -5,6 +5,11 @@
   justify-content: center;
 }
 .h1 {
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 32px;
+  }
   font-weight: 700;
   font-size: 48px;
   text-align: center;
@@ -16,6 +21,14 @@
   color: #eec0f0;
 }
 .gif {
+  @media screen and (max-width: 767px) {
+    width: 90%;
+    height: 90%;
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 30px;
+  }
   width: 50%;
   height: 50%;
 }
