@@ -1,7 +1,6 @@
 .block {
   display: flex;
   flex-direction: column;
-  padding: 0 20 20 20;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -16,12 +15,22 @@
   background: #fef4f2;
   border-radius: 10px;
   box-shadow: rgba(255, 145, 249, 0.2) 0px 8px 24px;
+
+  @media screen and (max-width: 767px) {
+    gap: 10px;
+    padding: 5px;
+    width: 300px;
+  }
 }
 .h1 {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
   color: #7e77a0;
+
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+  }
 }
 .fields {
   display: flex;
