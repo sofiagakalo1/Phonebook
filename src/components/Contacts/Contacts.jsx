@@ -9,11 +9,11 @@ import css from "./Contacts.module.scss";
 const Contacts = () => {
   return (
     <section className={css.block}>
-      <div className={`${css.wrapper_phonebook} ${css.wrapper}`}>
+      <div className={css.wrapper}>
         <h2 className={css.h}>Phonebook</h2>
         <ContactsForm />
       </div>
-      <div className={`${css.wrapper_contacts} ${css.wrapper}`}>
+      <div className={css.wrapper}>
         <h2 className={css.h}>Contacts</h2>
         <ContactsFilter />
         <ContactsList />

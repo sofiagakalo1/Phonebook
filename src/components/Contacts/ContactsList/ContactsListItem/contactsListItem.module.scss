@@ -2,9 +2,11 @@
   display: flex;
   font-size: 14px;
   color: #2c3e50;
-  width: 400px;
   border-bottom: 2px dotted transparent;
   &:hover {
     border-bottom: 2px dotted #7e77a0;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }  
 }

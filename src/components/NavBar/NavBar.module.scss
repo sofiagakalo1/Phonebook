@@ -27,7 +27,7 @@
 }
 
 .burger_menu_icon {
-  z-index: 2;
+  z-index: 999;
   margin-left: auto;
   border: none;
   background: none;
@@ -35,6 +35,7 @@
 }
 
 .mobile_menu {
+  z-index: 998;
   position: fixed;
   top: 0;
   left: 0;

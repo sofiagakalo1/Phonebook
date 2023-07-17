@@ -1,8 +1,12 @@
 .ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
   margin-top: 25px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    gap: 4px;
+    margin-top: 10px;
+  }
 }
