@@ -43,6 +43,7 @@ const UserMenu = () => {
           flexDirection: "row",
           gap: 8,
           alignItems: "center",
+          // width:"152px",
         }}
       >
         <Icon id="logout" h="28" w="28" />

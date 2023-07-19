@@ -38,9 +38,9 @@
   z-index: 998;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  width: 60%;
+  height: 60%;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
@@ -49,12 +49,12 @@
   }
 }
 
-.mobile_menu_lightTheme{
-  background-color: rgb(213, 197, 217);
+.mobile_menu_lightTheme {
+  background-color: #f8e2de;
 }
 
-.mobile_menu_darkTheme{
-  background-color: rgb(135, 105, 156);
+.mobile_menu_darkTheme {
+  background-color: #8f2dcc;
 }
 .open_menu_items {
   display: flex;
